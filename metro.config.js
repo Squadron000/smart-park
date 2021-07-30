@@ -14,4 +14,8 @@ module.exports = {
       },
     }),
   },
+  // https://stackoverflow.com/questions/60124435/however-this-package-itself-specifies-a-main-module-field-that-could-not-be-r
+  resolver: {
+    sourceExts: ['jsx', 'js', 'ts', 'tsx'], //add here
+  },
 };
