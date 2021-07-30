@@ -7,31 +7,24 @@
  *
  * @format
  */
-
+import 'react-native-gesture-handler'; // this import must stay at the top of all imports
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import Home from './src/screens/Home';
+const {Navigator, Screen} = createStackNavigator();
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <StatusBar barStyle={'dark-content'} />
-      <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <View>
-          <Text>Sultan Mark</Text>
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Navigator>
+        <Screen name="Home" component={Home} />
+      </Navigator>
+    </NavigationContainer>
   );
 };
 
-const styles = StyleSheet.create({});
+// const styles = StyleSheet.create({});
 
 export default App;
