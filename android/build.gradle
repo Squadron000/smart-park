@@ -2,6 +2,8 @@
 
 buildscript {
     ext {
+        // https://stackoverflow.com/questions/37500205/react-native-appinstalldebug-failed
+        multiDexEnabled = true //this is the line you need to enter
         buildToolsVersion = "29.0.3"
         minSdkVersion = 21
         compileSdkVersion = 29
